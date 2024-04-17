@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,  BrowserRouter } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 function App() {
@@ -7,21 +7,21 @@ function App() {
     <BrowserRouter>
       <div>
         <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+          </ul>
         </nav>
         <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route path="/about/*"element={<About/>} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about/*" element={<About />} />
         </Routes>
       </div>
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 export default App;
